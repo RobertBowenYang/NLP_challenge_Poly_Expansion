@@ -1,0 +1,2 @@
+torch 1.8
+Upload ipynb files to colab and upload dataset.txt file to directory and run all the cells.

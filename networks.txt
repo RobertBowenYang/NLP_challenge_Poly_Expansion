@@ -1,0 +1,5 @@
+LSTM: Basic LSTM module with an attention mechanism built with tokens, Each token will attend to an embedding matrix of dimension 11, each embedding represents a number 0-9 or not-number. The reason behind this implementation is because by running just the LSTM, I found that the linear term of the right hand side requires both multiplication and addition and baselien model often gets this part wrong. I think by attending to embeddings that represent numbers, it should achieve better performance. In experiment, the performance increased a bit from 47 to 55.
+
+Seq2seq with attention: sequence to sequence model with attention mechanism. Current word attends to all previous words. Performance is similar to previous LSTM implementation, around 55. Both encoder and decoder have 3 layers.
+
+Transformer: Found a successful implementation online with transformer and with about 1 epoch of training, it achieved 67 accuracy score. However, I wasn't able to make my implementation work and only achieved about 47% accuracy in the end. Encoder: 3layers, Decoder: 3 layers. Attention heads: 8, feedforward expansion: 4.
